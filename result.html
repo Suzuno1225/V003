@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>結果頁面</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center fixed;
+      background-size: cover;
+      font-family: "微軟正黑體", "Microsoft JhengHei", sans-serif;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    th, td {
+      padding: 15px 30px;
+      text-align: center;
+      font-size: 18px;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    td {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>這是你的結果</h1>
+
+  <table>
+    <tr>
+      <th>項目</th>
+      <th>資料</th>
+    </tr>
+    <tr>
+      <td>你的名字</td>
+      <td id="outputName"></td>
+    </tr>
+  </table>
+</div>
+
+<script>
+  const name = localStorage.getItem('userName');
+  document.getElementById('outputName').textContent = name;
+</script>
+
+</body>
+</html>
